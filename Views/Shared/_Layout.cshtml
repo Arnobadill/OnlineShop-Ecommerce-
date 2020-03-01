@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - OnlineShop</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.1/css/buttons.dataTables.min.css" />
+</head>
+<body style="background: ghostwhite;">
+    <img src="~/images/VATPrompt.png" width="250" height="150" style="margin-left: 570px;margin-top: -51px;" class="center" />
+    <p style="color:forestgreen; margin-left: 32px;margin-top: -41px; text-align: center;">Automated VAT Management</p>
+    <header style="margin-top:15px;">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="btn btn-success" asp-area="" asp-controller="Home" asp-action="Index">VATPrompt</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <partial name="_LoginPartial" />
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a  asp-area="" asp-controller="ProductTypes" asp-action="Index"
+                               class="btn btn-outline-success my-2 my-sm-0">Control Pnael</a>
+                        </li>
+                        <li class="nav-item">
+                            <a  asp-area="" asp-controller="TagNames" asp-action="Index"
+                               class="btn btn-outline-success my-2 my-sm-0">Goods/Service Setup</a>
+                        </li>
+                        <li class="nav-item">
+                            <a  asp-area="" asp-controller="Product" asp-action="Index"
+                               class="btn btn-outline-success my-2 my-sm-0">VAT Transaction</a>
+                        </li>
+                        <li class="nav-item">
+                            <a  asp-area="" asp-controller="Product" asp-action="Index"
+                               class="btn btn-outline-success my-2 my-sm-0">VAT Reports</a>
+                        </li>
+                        <li class="nav-item">
+                            <a  asp-area="" asp-controller="Product" asp-action="Index"
+                               class="btn btn-outline-success my-2 my-sm-0">Data Exchange</a>
+                        </li>
+                        <li class="nav-item">
+                            <a  asp-area="" asp-controller="Product" asp-action="Index"
+                               class="btn btn-outline-success my-2 my-sm-0">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 -All Right Reserves Codeminers - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.1/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.flash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.print.min.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
